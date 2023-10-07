@@ -1,0 +1,200 @@
+Claro, aqui está o código traduzido para o português:
+
+-- Adicionar alterações à tag não lançada até que façamos um lançamento.
+
+xxxxx , v1.4.11
+
+1 Nov 2021 , v1.4.10
+- correção: timeout em placas Non-AVR; recurso: Use yield() em loops de espera ocupados @greezybacon 
+- correção do problema PCD após auto-teste
+
+31 Jul 2021, v1.4.9
+- Removido exemplo AccessControl
+- Documentação atualizada
+
+30 Dez 2020, v1.4.8
+- Corrigida velocidade errada do clock SPI.
+
+25 Jun 2020, v1.4.7
+- Corrigidos erros de digitação
+- Layout de memória PICC movido para /doc
+
+21 Jan 2020, v1.4.6
+- Biblioteca em modo de congelamento, sem novos recursos, sem novos exemplos, apenas correções de bugs para manter a compatibilidade com projetos antigos
+- Documentação atualizada
+- Removidos avisos de descontinuação devido ao congelamento de código
+
+12 Jun 2019, v1.4.5
+- Biblioteca em modo de congelamento, sem novos recursos, sem novos exemplos, apenas correções de bugs para manter a compatibilidade com projetos antigos
+- README atualizado
+
+31 Mar 2019, v1.4.4
+- Exemplo corrigido
+- Corrigido UnbrickUidSector
+- Comentários atualizados
+- Removido Teensy da configuração CI e PlatformIO
+
+27 Oct 2018, v1.4.3
+- Adicionada detecção de falsificação e dica sobre placas defeituosas
+- Melhoria no reset baseado em hardware
+
+04 Oct 2018, v1.4.2
+- Palavras-chave corrigidas
+- Alterado status de desenvolvimento da biblioteca
+
+04 Oct 2018, v1.4.1
+- Substituído UINT8_MAX por UNUSED_PIN
+- Substituído valor padrão NULL por nullptr correto para ponteiro
+- Adicionado layout de pinos para wemos d1 mini @mmone
+- Adicionado layout Fritzing alternativo para leitor mfrc522 @jose1711
+- Adicionadas funções de controle de energia suave @Bill2462
+- Erro de digitação corrigido no exemplo ReadAndWrite.ino @Drachenfrucht1
+- Correção de gramática @KiddieD
+- Corrigido loop infinito no exemplo AccessControl.ino @mads256c 
+- Corrigido ID de chave 0-index igual a 0 falha em AccessControl.ino @thoaitrieu
+- Tipo booleano alterado para bool para um uso mais comum @Rotzbua 
+- Nomes de variáveis errados corrigidos em PICC_Select MFRC522.cpp @tuyethoa08041997
+- Corrigido PCD_Init() travando em placas não arduino @heziegl
+- Corrigido possível loop infinito PCD_Reset() @psgreco
+- E muitos agradecimentos a todos os outros colaboradores
+
+13 Apr 2018, v1.4.0
+- Substituído UINT8_MAX por UNUSED_PIN @Rotzbua
+- Corrigido PCD_Init() travando em placas não arduino @heziegl
+- Obsoletar MIFARE_SetAccessBits @Rotzbua
+- IMPORTANTE: v1.4.X será a última versão sob a licença "unlicense"
+
+22 Mar 2017, v1.3.6
+- Adicionados avisos de descontinuação e avisos do compilador @Rotzbua
+
+8 Apr 2017, v1.3.5
+- Atualizado "AccessControl.ino", bugs corrigidos e método de pesquisa de botão de limpeza alternativo sem usar outra biblioteca @beyondszine revisado por @omersiar 
+- README atualizado sobre a porta para esp8266 @mmmmar
+
+7 Apr 2017, v1.3.4
+- Adicionado novo exemplo "rfid_read_personal_data.ino" @ryand1011
+- Estilo de código do exemplo "rfid_write_personal_data.ino" atualizado para o Arduino IDE @Rotzbua
+- Removido (temporariamente) Teensy do script de compilação do travis porque falha @Rotzbua
+
+26 Mar 2017, v1.3.3
+- Corrigidos bugs em MFRC522Extended, agora deve funcionar com Desfire.h da JPG-Consulting @Rotzbua
+- Erro UINT8_MAX corrigido @Rotzbua
+
+15 Mar 2017, v1.3.2
+- Adicionado suporte ESP8266 ao library.properties
+
+15 Mar 2017, v1.3.1
+- Aviso de compilação corrigido em MFRC522Extended @Rotzbua
+- Função não utilizada removida @Rotzbua
+
+13 Mar 2017, v1.3.0
+- Aviso: O código-fonte foi movido para a pasta src!
+- Adicionada classe adicional para suportar PICCs ISO/IEC 14443-4 @JPG-Consulting
+- Adicionado RATS (Request for Answer To Select) @JPG-Consulting
+- Mais informações em https://github.com/miguelbalboa/rfid/pull/271 @JPG-Consulting
+
+13 Mar 2017, v1.2.1
+- Removida a necessidade de pino de reset #275 @tkoester
+- Adicionada opção de velocidade SPI + Diversas mudanças menores #276 @tuyethoa08041997
+- Documentação atualizada, script de compilação travis e pequena alteração no código @Rotzbua
+
+3 Jan 2017, v1.2.0
+- Aviso: Esta versão introduz o uso de stdint.h, o uso de tipos int não bem definidos foi abandonado.
+           A interface mudou: por exemplo, long -> int32_t
+           @Rotzbua
+- Removido exemplo problemático examples/servo_motor/servo_motor.ino @omersiar
+- Adicionado examples/AccessControl/AccessControl.ino @omersiar
+- Corrigidos problemas menores relatados em #211 @omersiar
+- Adicionada dica de componentes defeituosos ao README @danielcbit
+- Corrigido autoteste @surr
+- Corrigido problema de autenticação com UIDs longos @surr
+
+26 Aug 2016, v1.1.9
+- Aviso: Somente a versão 1.6 do Arduino IDE é suportada, atual
+
+ize sua IDE para 1.6 para usar esta biblioteca.
+- Adicionado suporte à plataforma ESP8266 @Rotzbua
+- Conteúdo do README.rst alterado para mostrar mais informações @Rotzbua
+- Alterações menores no exemplo examples/ReadUidMultiReader/ReadUidMultiReader.ino @Rotzbua
+
+11 Feb 2016, v1.1.8
+- Adicionado exemplo examples/MinimalInterrupt/MinimalInterrupt.ino, exemplo de Interrupção @lmmeng
+- Adicionado arquivo .gitignore permite que o projeto seja mais facilmente usado como subprojeto. @BenWiederhake
+- Adicionados pinouts Teensy 2.0 e Tensy++ 2.0 ao README.rst @jkutianski
+
+16 Jan 2016, v1.1.7
+- Correção de ortografia e gramática no README.rst @cuthbertnibbles
+- Adicionado exemplo examples/servo_motor/servo_motor.ino, Controle de Acesso RFID Arduino com um Servo Motor @techied
+- Adicionado exemplo examples/RFID-Cloner/RFID-Cloner.ino Copie cartões RFID com autenticação padrão @stefanblommaert
+- Corrigir erro de compilação em examples/RFID-Cloner/RFID-Cloner.ino, usando MFRC522:::PICC_Type, @Rotzbua
+
+06 Jan 2016, v1.1.6
+- Erro de compilação corrigido para exemplo examples/ReadNUID/ReadNUID.ino. @Rotzbua
+
+04 Jan 2016, v1.1.5
+- Use funções de configuração nas bibliotecas SPI, setSPIConfig foi excluído, agora a biblioteca usa SPI.beginTransaction() e SPI.endTransaction() @sophiekovalevsky
+- Adicionado exemplo examples/ReadNUID/ReadNUID.ino, mostrando como ler novo NUID de um PICC para serial. @sophiekovalevsky
+
+03 Jan 2016, v1.1.4
+- Adicionada Autenticação com Ntag 213,215,216 retorna o pACK MFRC522::PCD_NTAG216_AUTH @Gargantuanman
+- Começando a usar versões http://semver.org/
+- Integração Contínua @ivankravets 
+- funções retornam MFRC522::StatusCode e MFRC522::PICC_Type em vez de byte genérico @rotzbua
+- valores int removidos de MFRC522::StatusCode e MFRC522::PICC_Type @rotzbua
+
+05 Dec 2015
+- reconhece corretamente cartões da Infineon @mayatforest
+- suporte para vários leitores adicionado, veja o exemplo @lmmeng
+
+10 Nov 2014
+- Atualizado o changelog.
+- Adicionado arquivo makefile.
+
+24 Oct 2014
+- Adicionado arquivo de manifesto baseado no PlatformIO.
+
+17 Jul 2014
+- Documentação escrita para a biblioteca.
+- Adicionado exemplo rfid_default_keys.
+
+11 Jun 2014
+- Exemplo atualizado: ReadAndWrite.
+
+14 Apr 2014
+- Exemplos atualizados: DumpInfo, MifareClassicValueBlock e ReadAndWrite.
+
+12 Feb 2014
+- Estado inicial incorreto do resetPowerDownPin corrigido.
+
+29 Jan 2014
+- Estado inicial incorreto do chipSelectPin corrigido.
+
+30 Nov 2013
+- Exemplos colocados em suas próprias pastas.
+- Arquivo keywords.txt atualizado.
+
+12 Nov 2013
+- Exemplos atualizados: DumpInfo, MifareClassicValueBlock e ReadAndWrite.
+
+20 Oct 2013
+- Todas as constantes, funções e parâmetros agora estão comentados em inglês.
+- Código refatorado, a maioria dos nomes de funções foi alterada.
+- Suporte para anti colisão ISO-14443-3 e UIDs de 4/7/10 bytes (níveis de cascata).
+- Adicionadas funções para MIFARE Classic Decrement/Increment/Restore/Transfer
+  e MIFARE Ultralight Write.
+- Novos exemplos escritos.
+
+19 Oct 2013
+- Biblioteca renomeada de RFID para MFRC522 (RFID parecia muito genérico).
+- Nomes de registradores alterados para estar em conformidade com a folha de dados.
+- Definições globais movidas para dentro da classe.
+
+24 Sep 2013
+- Desativar a criptografia quando o tag é interrompido.
+
+27 Jan 2013
+- Adicionado README e pequena lista de tarefas (TODO list).
+- Adicionado exemplo para mostrar Serial no display LCD.
+
+09 Sep 2012
+- Commit inicial para o GitHub.
